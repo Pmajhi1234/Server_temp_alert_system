@@ -1,0 +1,6 @@
+setChartLibrary('google-chart')
+setChartTitle('Server Temperature Monitoring System');
+setChartType("lineGraph");
+setAxisName('Time','Temperatur of server');
+mul(0.09765625);
+plotChart('time_stamp','pin');
