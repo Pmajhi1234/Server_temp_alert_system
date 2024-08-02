@@ -36,6 +36,8 @@ while True:
             print("Temperature crossed the thresold limit 30 degree.")
             print("Switching on the Buzzer")
             mybolt.digitalWrite('1', 'HIGH')
+            time.sleep(5)
+            mybolt.digitalWrite('1','LOW')
             print(end='\n')
             print("Making request to Twilio to send Sms")
             response1 = sms.send_sms("Warning,The Current temperature sensor value is " +str(temperatue)) # Send an SMS to the number and store the resonse in variable
