@@ -53,8 +53,7 @@ while True:
             response2 = mailer.send_email("Alert", "Warning,The Current temperature sensor value is " +str(temperatue))   # Send an Email to the recipient and store the resonse in variable
             response_text = json.loads(response2.text)
             print("Response received from Mailgun is: " + str(response_text['message']))
-        else:
-           mybolt.digitalWrite('1', 'LOW')
+        
           
     except Exception as e: 
         print ("Error occured: Below are the details")
